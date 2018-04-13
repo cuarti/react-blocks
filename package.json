@@ -1,0 +1,107 @@
+{
+  "name": "react-blocks",
+  "version": "0.1.0",
+  "description": "UI library in React",
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "typings": "src/index",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:webpack",
+    "build:ts": "tsc",
+    "build:webpack": "TS_NODE_PROJECT=.build-config/tsconfig.json webpack --config .build-config/webpack/config.ts --config-name prod",
+    "build:storybook": "build-storybook -c test/stories -s public",
+    "dev:ts": "tsc --watch",
+    "dev:webpack": "TS_NODE_PROJECT=.build-config/tsconfig.json webpack-dev-server --config .build-config/webpack/config.ts --config-name dev",
+    "dev:storybook": "TS_NODE_PROJECT=.build-config/tsconfig.json start-storybook -p 6006 -c .build-config/storybook -s public",
+    "test": "npm run test:lint && npm run test:jest",
+    "test:lint": "npm run test:tslint && npm run test:stylelint",
+    "test:tslint": "tslint **/*.ts -e '**/*.d.ts' -t verbose",
+    "test:stylelint": "stylelint **.*.scss --syntax scss",
+    "test:jest": "jest",
+    "script:createUser": "ts-node ./scripts/createUser.ts"
+  },
+  "author": {
+    "name": "Albert Cuartiella",
+    "email": "cuarti1992@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuarti/react-blocks.git"
+  },
+  "homepage": "https://github.com/cuarti/react-blocks#readme",
+  "bugs": {
+    "url": "https://github.com/cuarti/react-blocks/issues"
+  },
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-css-themr": "^2.1.2",
+    "react-dom": "^16.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.1",
+    "@storybook/addon-links": "^4.0.0-alpha.1",
+    "@storybook/react": "^4.0.0-alpha.1",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.5",
+    "@types/react": "^16.3.10",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-hot-loader": "^3.0.6",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/webpack": "^4.1.3",
+    "@types/webpack-notifier": "^1.5.3",
+    "awesome-typescript-loader": "^5.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
+    "node-sass": "^4.8.3",
+    "react-hot-loader": "^4.0.1",
+    "react-test-renderer": "^16.3.1",
+    "sass-loader": "^7.0.1",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.20.3",
+    "stylelint": "^9.2.0",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-notifier": "^1.6.0"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    },
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "__snapshots__"
+    ],
+    "testRegex": "/test/spec.*|(\\.|/)\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
