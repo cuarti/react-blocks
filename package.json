@@ -13,10 +13,10 @@
     "build": "npm run build:ts && npm run build:webpack",
     "build:ts": "tsc",
     "build:webpack": "TS_NODE_PROJECT=.build-config/tsconfig.json webpack --config .build-config/webpack/config.ts --config-name prod",
-    "build:storybook": "build-storybook -c test/stories -s public",
+    "build:storybook": "build-storybook -c test/stories",
     "dev:ts": "tsc --watch",
     "dev:webpack": "TS_NODE_PROJECT=.build-config/tsconfig.json webpack-dev-server --config .build-config/webpack/config.ts --config-name dev",
-    "dev:storybook": "TS_NODE_PROJECT=.build-config/tsconfig.json start-storybook -p 6006 -c .build-config/storybook -s public",
+    "dev:storybook": "TS_NODE_PROJECT=.build-config/tsconfig.json start-storybook -p 6006 -c .build-config/storybook",
     "test": "npm run test:lint && npm run test:jest",
     "test:lint": "npm run test:tslint && npm run test:stylelint",
     "test:tslint": "tslint **/*.ts -e '**/*.d.ts' -t verbose",
@@ -37,6 +37,7 @@
     "url": "https://github.com/cuarti/react-blocks/issues"
   },
   "dependencies": {
+    "normalize.css": "^8.0.0",
     "react": "^16.3.1",
     "react-css-themr": "^2.1.2",
     "react-dom": "^16.3.1"
