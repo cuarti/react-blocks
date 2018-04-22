@@ -6,6 +6,34 @@
 	}
 }
 
+@mixin active {
+	&.active,
+	&:active {
+		@content;
+	}
+}
+
+@mixin focus {
+	&.focus,
+	&:focus {
+		@content;
+	}
+}
+
+@mixin disabled {
+	&.disabled,
+	&:disabled {
+		@content;
+	}
+}
+
+@mixin not-disabled {
+	&:not(.disabled):not(:disabled) {
+		@content;
+	}
+}
+
+// TODO: Comprobar si es necesario
 @mixin hover-focus {
 	&:hover,
 	&:focus {
@@ -13,6 +41,7 @@
 	}
 }
 
+// TODO: Comprobar si es necesario
 @mixin plain-hover-focus {
 	&,
 	&:hover,
@@ -21,6 +50,7 @@
 	}
 }
 
+// TODO: Comprobar si es necesario
 @mixin focus-active {
 	&:focus,
 	&:active {
@@ -28,6 +58,7 @@
 	}
 }
 
+// TODO: Comprobar si es necesario
 @mixin hover-focus-active {
 	&:hover,
 	&:focus,

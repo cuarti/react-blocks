@@ -1,32 +1,76 @@
 
+@import "../functions";
 @import "hover";
 
 
-// TODO: Deveria ser privado, es decir dentro del mixin button-variant
-@mixin bg-color($color) {
+// TODO: Add button-outline-theme
+@mixin button-theme($theme: map-get($button-themes, $theme-default)) {
+
+	$color: map-get($theme, color);
+
 	background-color: $color;
-	border: 1px solid darken($color, 5%);
+	color: color-contrast($color);
+	border-color: darken($color, 5%);
+
+	@include not-disabled {
+
+		@include hover {
+			background-color: darken($color, 10%);
+			border-color: darken($color, 15%);
+		}
+
+		@include active {
+			background-color: darken($color, 20%);
+			border-color: darken($color, 25%);
+		}
+
+		@include focus {
+			box-shadow: 0 0 0 3px rgba($color, .5);
+		}
+
+	}
+
 }
 
+@mixin button-outline-theme($theme: map-get($button-themes, $theme-default)) {
 
-@mixin button-variant($color) {
+	$color: map-get($theme, color);
+	$text-color: color-contrast($color);
 
-	//background-color: $color;
-	@include bg-color($color);
+	background-color: transparent;
+	color: $color;
+	border-color: $color;
 
-	@include hover {
-		//background-color: darken($color, 5%);
-		@include bg-color(darken($color, 5%));
+	@include not-disabled {
+
+		@include hover {
+			background-color: darken($color, 10%);
+			color: $text-color;
+			border-color: darken($color, 15%);
+		}
+
+		@include active {
+			background-color: darken($color, 20%);
+			color: $text-color;
+			border-color: darken($color, 25%);
+		}
+
+		@include focus {
+			box-shadow: 0 0 0 3px rgba($color, .5);
+		}
+
 	}
 
-	@include focus-active {
-		//background-color: darken($color, 10%);
-		@include bg-color(darken($color, 10%));
-	}
+}
 
-	//@mixin bg-color($color) {
-	//    background-color: $color;
-	//    border: 1px solid darken($color, 10%);
-	//}
+@mixin button-size($size: map-get($button-sizes, $size-default)) {
+
+	$padding:		map-get($size, padding);
+	$font-size: 	map-option($size, font-size, $font-size-base);
+	$border-radius:	map-option($size, border-radius, $border-radius-base);
+
+	padding: $padding;
+	font-size: $font-size;
+	border-radius: $border-radius;
 
 }

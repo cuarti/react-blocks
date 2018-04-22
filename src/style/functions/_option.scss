@@ -1,0 +1,16 @@
+
+
+@function option($value, $default) {
+
+	@if $value != null {
+		@return $value;
+	}
+	@else {
+		@return $default;
+	}
+
+}
+
+@function map-option($map, $key, $default) {
+	@return option(map-get($map, $key), $default);
+}

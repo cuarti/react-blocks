@@ -1,0 +1,104 @@
+
+@import "colors";
+@import "scaffolding";
+
+
+/*
+ * Button base variables
+ */
+$button-border-width: 	1px !default;
+$button-font-weight: 	normal !default;
+$button-line-height:	$line-height !default;
+
+$button-transition: background-color ease-in-out .15s,
+	border-color ease-in-out .15s,
+	box-shadow ease-in-out .15s !default;
+
+
+/*
+ * Button theme variables
+ */
+$button-themes: (
+	primary: (
+		color: $theme-primary
+	),
+	secondary: (
+		color: $theme-secondary
+	),
+	info: (
+		color: $theme-info
+	),
+	success: (
+		color: $theme-success
+	),
+	warning: (
+		color: $theme-warning
+	),
+	danger: (
+		color: $theme-danger
+	),
+	light: (
+		color: $theme-light
+	),
+	dark: (
+		color: $theme-dark
+	)
+) !default;
+
+
+/*
+ * Button size variables
+ */
+$button-sizes: (
+	xs: (
+		padding: 		2px 4px,
+		font-size:		$font-size-xs,
+		border-radius:	$border-radius-xs
+	),
+	sm: (
+		padding: 		4px 8px,
+		font-size: 		$font-size-sm,
+		border-radius: 	$border-radius-sm
+	),
+	md: (
+		padding: 		6px 12px,
+		font-size: 		$font-size-md,
+		border-radius: 	$border-radius-md
+	),
+	lg: (
+		padding: 		8px 16px,
+		font-size: 		$font-size-lg,
+		border-radius:	$border-radius-lg
+	),
+	xl: (
+		padding: 		10px 20px,
+		font-size: 		$font-size-xl,
+		border-radius:	$border-radius-xl
+	)
+) !default;
+
+
+// TODO: REVISAR
+
+//$button-link-disabled-color: $gray-light !default;
+//
+//$btn-border-width:            $input-btn-border-width !default;
+//
+//$btn-font-weight:             $font-weight-normal !default;
+//$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+//$btn-focus-width:             $input-btn-focus-width !default;
+//$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+//$btn-disabled-opacity:        .65 !default;
+//$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+//
+//$btn-link-disabled-color:     $gray-600 !default;
+//
+//$btn-block-spacing-y:         .5rem !default;
+//
+//// Allows for customizing button radius independently from global border radius
+//$btn-border-radius:           $border-radius !default;
+//$btn-border-radius-lg:        $border-radius-lg !default;
+//$btn-border-radius-sm:        $border-radius-sm !default;
+//
+//$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color
+// .15s ease-in-out, box-shadow .15s ease-in-out !default;

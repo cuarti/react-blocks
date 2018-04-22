@@ -1,0 +1,14 @@
+
+@import "../variables";
+
+
+@function color-contrast($evaluate-color, $color-light: $text-color-light, $color-dark: $text-color-dark) {
+
+	@if lightness($evaluate-color) > 50 {
+		@return $color-dark;
+	}
+	@else {
+		@return $color-light;
+	}
+
+}

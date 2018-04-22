@@ -1,60 +1,12 @@
 
-/*
- * Variables
- * ================================================
- */
-
-/*
- * Colors
- * ------------------------------------------------
- */
-$black: #222;
-//$black-light: #333;
-//$black-lighter: #4b4b4b;
-//$grey-darker: #868686;
-//$grey-dark: #777;
-//$grey: #999;
-//$grey-light: #bbb;
-//$grey-lighter: #c6c6c6;
-//$white-darker: #e2e2e2;
-//$white-dark: #efefef;
-$white: #fafafa;
-
-$dark-text-color: $black;
-$light-text-color: $white;
-$text-color: $dark-text-color;
-
-
-/*
- * Screen devices width
- * ------------------------------------------------
- */
-$screen-lg: 1200px;
-$screen-md: 992px;
-$screen-sm: 768px;
-$screen-xs: 480px;
-
-
 /**
- * Layout
- * ------------------------------------------------
+ * Base
  */
-$gutter: 15px;
-$gutter-col: $gutter / 2;
-$columns: 12;
+@import "variables/colors";
+@import "variables/screen";
+@import "variables/scaffolding";
 
-$box-background: #aaa;
-
-$radius-base: 5px;
-$radius-sm: 4px;
-$radius-xs: 3px;
-
-
-/**
- * Header
- * ------------------------------------------------
+/*
+ * Components
  */
-$header-background-color: $black;
-$header-color: #fff;
-$header-height: 60px;
-$header-padding-horizontal: $gutter;
+@import "variables/button";

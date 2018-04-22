@@ -1,0 +1,35 @@
+
+
+$white: 		#fafafa !default;
+$white-dark: 	#efefef !default;
+//$white-darker: 	#e2e2e2 !default;
+//$gray-lighter: 	#c6c6c6 !default;
+//$gray-light: 	#bbb !default;
+//$gray: 			#999 !default;
+//$gray-dark: 	#777 !default;
+//$gray-darker: 	#868686 !default;
+//$black-lighter: #4b4b4b !default;
+$black-light: 	#333 !default;
+$black: 		#222 !default;
+
+$theme-primary:		#59d5c4 !default;
+$theme-secondary: 	#ac5d9f !default;
+$theme-info:		#64a9d7 !default;
+$theme-success:		#72c96d !default;
+$theme-warning:		#f7be4c !default;
+$theme-danger:		#ec5055 !default;
+$theme-light:		#e3e8e6 !default;
+$theme-dark:		#485b71 !default;
+
+$theme-colors: (
+	primary: 	$theme-primary,
+	secondary: 	$theme-secondary,
+	info: 		$theme-info,
+	success: 	$theme-success,
+	warning: 	$theme-warning,
+	danger: 	$theme-danger,
+	light: 		$theme-light,
+	dark: 		$theme-dark
+) !default;
+
+$theme-default: "light" !default;
