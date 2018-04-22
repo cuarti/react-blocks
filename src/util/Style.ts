@@ -7,28 +7,26 @@ import {CSSProperties} from 'react';
  */
 export module Style {
 
-	export function classNames(classNames: string[]): string;
-	export function classNames(...classNames: string[]): string;
-	export function classNames(classNames: {[name: string]: boolean}): string;
-
 	/**
 	 * Merge class names in a string
 	 *
-	 * @param   classNames  List of class names
-	 * @return              Concatenated class names
+	 * @param	classNames	List of class names
+	 * @return				Concatenated class names
 	 */
-	export function classNames(...classNames: any[]): string {
+	export function classNames(...classNames: Array<string | Record<string, boolean>>): string {
 
-		if(typeof classNames[0] === 'object') {
-			classNames = classNames[0];
-		}
+		return classNames.reduce((r, v) => {
 
-		if(!(classNames instanceof Array)) {
-			// TODO: Abstract in @agama/types object filter iterator
-			classNames = Object.keys(classNames).filter(k => classNames[k]);
-		}
+			if(typeof v === 'object') {
+				// TODO: Abstract in @agama/types object filter iterator
+				return r.concat(Object.keys(v).filter(k => !!k && v[k]));
+			}
 
-		return classNames.filter(c => typeof c === 'string').join(' ');
+			return r.concat(v);
+
+		// TODO: Abstract in @agama/types array uniques modifier
+		}, []).filter((v, i, a) => a.slice(0, i).indexOf(v) < 0).join(' ');
+
 	}
 
 	/**
