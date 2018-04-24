@@ -1,0 +1,67 @@
+
+@import "../../../style/variables";
+@import "../../../style/mixins";
+
+
+.button {
+	border: $button-border-width solid;
+	font-weight: $button-font-weight;
+	box-shadow: 0 0 3px rgba($black, .15);
+	line-height: $button-line-height;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: all ease .15s;
+	@include button-size();
+
+	@include disabled {
+		box-shadow: none;
+		opacity: .65;
+		cursor: not-allowed;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+
+	@include not-disabled {
+
+		@include hover {
+			box-shadow: 0 0 4px rgba($black, .25);
+		}
+
+		@include active {
+			box-shadow: 0 0 5px rgba($black, .4);
+		}
+
+	}
+
+}
+
+@each $name, $theme in $button-themes {
+
+	.#{$name} {
+		@include button-theme($theme);
+
+		&.outline {
+			@include button-outline-theme($theme);
+		}
+
+	}
+
+}
+
+@each $name, $size in $button-sizes {
+	.#{$name} {
+		@include button-size($size);
+	}
+}
+
+.block {
+	display: block;
+	width: 100%;
+
+	+ .block {
+		margin-top: 5px;
+	}
+
+}
