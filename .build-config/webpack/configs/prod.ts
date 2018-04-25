@@ -1,7 +1,7 @@
 
 import {basic} from './basic';
 import {notifierPlugin, prodEnvPlugin} from '../plugins';
-import {scriptRule, prodStyleRule} from '../rules';
+import {scriptRule, prodStyleRule, fontRule} from '../rules';
 
 
 /*
@@ -35,7 +35,8 @@ export const prod = {
 	module: {
 		rules: [
 			scriptRule,
-			prodStyleRule
+			prodStyleRule,
+			fontRule
 		]
 	},
 

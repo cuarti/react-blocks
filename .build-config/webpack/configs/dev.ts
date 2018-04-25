@@ -1,7 +1,7 @@
 
 import {PUB_DIR} from '../../variables';
 import {basic} from './basic';
-import {scriptRule, devStyleRule} from '../rules';
+import {scriptRule, devStyleRule, fontRule} from '../rules';
 import {namedModulesPlugin, devEnvPlugin, hmrPlugin} from '../plugins';
 
 
@@ -32,7 +32,8 @@ export const dev = {
 	module: {
 		rules: [
 			scriptRule,
-			devStyleRule
+			devStyleRule,
+			fontRule
 		]
 	},
 

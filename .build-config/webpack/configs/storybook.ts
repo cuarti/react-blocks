@@ -1,6 +1,6 @@
 
 import {basic} from './basic';
-import {devStyleRule, scriptRule} from '../rules';
+import {devStyleRule, fontRule, scriptRule} from '../rules';
 import {devEnvPlugin, namedModulesPlugin} from '../plugins';
 
 
@@ -17,7 +17,8 @@ export const storybook = {
 	module: {
 		rules: [
 			scriptRule,
-			devStyleRule
+			devStyleRule,
+			fontRule
 		]
 	},
 

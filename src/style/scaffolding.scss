@@ -1,0 +1,28 @@
+
+@import "variables";
+@import "fonts";
+@import "../../node_modules/normalize.css/normalize";
+
+
+* {
+	font-family: $font-regular;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: $window-bg;
+	color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-title;
+}
+
+a {
+	outline: none;
+}
