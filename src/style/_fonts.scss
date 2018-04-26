@@ -1,121 +1,116 @@
 
-$font-directory-path:   		"../fonts" !default;
-$font-title-directory-path:		"#{$font-directory-path}/Overpass" !default;
-$font-regular-directory-path:	"#{$font-directory-path}/Lato" !default;
-
-$font-title:	"Overpass", sans-serif !default;
-$font-regular: 	"Lato", sans-serif !default;
+@import "variables";
 
 
 // Overpass
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Thin.ttf");
+	src: url("#{$font-title-directory}/Overpass-Thin.ttf");
 	font-weight: 100;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-ThinItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-ThinItalic.ttf");
 	font-weight: 100;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-ExtraLight.ttf");
+	src: url("#{$font-title-directory}/Overpass-ExtraLight.ttf");
 	font-weight: 200;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-ExtraLightItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-ExtraLightItalic.ttf");
 	font-weight: 200;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Light.ttf");
+	src: url("#{$font-title-directory}/Overpass-Light.ttf");
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-LightItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-LightItalic.ttf");
 	font-weight: 300;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Regular.ttf");
+	src: url("#{$font-title-directory}/Overpass-Regular.ttf");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Italic.ttf");
+	src: url("#{$font-title-directory}/Overpass-Italic.ttf");
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-SemiBold.ttf");
+	src: url("#{$font-title-directory}/Overpass-SemiBold.ttf");
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-SemiBoldItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-SemiBoldItalic.ttf");
 	font-weight: 600;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Bold.ttf");
+	src: url("#{$font-title-directory}/Overpass-Bold.ttf");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-BoldItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-BoldItalic.ttf");
 	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-ExtraBold.ttf");
+	src: url("#{$font-title-directory}/Overpass-ExtraBold.ttf");
 	font-weight: 800;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-ExtraBoldItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-ExtraBoldItalic.ttf");
 	font-weight: 800;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-Black.ttf");
+	src: url("#{$font-title-directory}/Overpass-Black.ttf");
 	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("#{$font-title-directory-path}/Overpass-BlackItalic.ttf");
+	src: url("#{$font-title-directory}/Overpass-BlackItalic.ttf");
 	font-weight: 900;
 	font-style: italic;
 }
@@ -124,70 +119,70 @@ $font-regular: 	"Lato", sans-serif !default;
 // Lato
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Hairline.ttf");
+	src: url("#{$font-regular-directory}/Lato-Hairline.ttf");
 	font-weight: 100;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-HairlineItalic.ttf");
+	src: url("#{$font-regular-directory}/Lato-HairlineItalic.ttf");
 	font-weight: 100;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Light.ttf");
+	src: url("#{$font-regular-directory}/Lato-Light.ttf");
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-LightItalic.ttf");
+	src: url("#{$font-regular-directory}/Lato-LightItalic.ttf");
 	font-weight: 300;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Regular.ttf");
+	src: url("#{$font-regular-directory}/Lato-Regular.ttf");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Italic.ttf");
+	src: url("#{$font-regular-directory}/Lato-Italic.ttf");
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Bold.ttf");
+	src: url("#{$font-regular-directory}/Lato-Bold.ttf");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-BoldItalic.ttf");
+	src: url("#{$font-regular-directory}/Lato-BoldItalic.ttf");
 	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-Black.ttf");
+	src: url("#{$font-regular-directory}/Lato-Black.ttf");
 	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Lato;
-	src: url("#{$font-regular-directory-path}/Lato-BlackItalic.ttf");
+	src: url("#{$font-regular-directory}/Lato-BlackItalic.ttf");
 	font-weight: 900;
 	font-style: italic;
 }

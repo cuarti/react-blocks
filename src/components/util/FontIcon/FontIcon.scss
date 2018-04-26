@@ -1,0 +1,24 @@
+
+@import "../../../style/variables";
+
+
+// TODO: Mover contenido a style/_fonticons.scss
+// TODO: Cambiar de .{provider}.{icon} a .{provider}-{icon}
+
+@each $name, $provider in $fonticons {
+
+	$family: map-get($provider, family);
+	$icons: map-get($provider, icons);
+
+	.#{$name}::before {
+		font-family: $family;
+		font-style: normal;
+	}
+
+	@each $icon, $content in $icons {
+		.#{$name}.#{$icon}::before {
+			content: $content;
+		}
+	}
+
+}
