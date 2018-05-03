@@ -6,7 +6,7 @@ import {TReactCSSThemrTheme} from 'react-css-themr';
 import {Themr, Style, StyledProps} from '../../../util';
 
 const theme = require('./FontIcon.scss');
-require('../../../style/_fonticons.scss');
+const iconfonts = require('../../../style/iconfonts.scss');
 
 
 export interface FontIconTheme extends TReactCSSThemrTheme {
@@ -28,21 +28,18 @@ export class FontIcon extends PureComponent<FontIconProps> {
 	public render(): ReactNode {
 
 		let {theme, className, value, ...rest} = this.props;
-		let [,provider, icon] = /^([^\.]+)\.(.+)$/.exec(value);
+
+		let [, provider, icon] = value.includes('.')
+			? /^([^.]+)\.(.+)$/.exec(value)
+			: [undefined, 'default', value];
 
 		className = Style.classNames(
 			theme.icon,
-			theme[provider],
-			theme[icon],
+			iconfonts[`${provider}-${icon}`],
 			className
 		);
 
-		console.log(theme);
-		console.log(className);
-
-		return (
-			<i className={className} {...rest} />
-		);
+		return <span className={className} {...rest} />;
 
 	}
 

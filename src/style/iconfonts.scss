@@ -1,0 +1,39 @@
+
+@import "variables";
+@import "iconfonts-fonts";
+
+
+// TODO: Use ligatures technique
+// @see: https://alistapart.com/article/the-era-of-symbol-fonts
+// @see: https://google.github.io/material-design-icons/#icon-font-for-the-web
+@each $name, $provider in $fonticons {
+
+	$family: map-get($provider, family);
+	$icons: map-get($provider, icons);
+
+	[class*="iconfonts-#{$name}-"] {
+		font-family: $family;
+	}
+
+	@each $icon, $content in $icons {
+		.#{$name}-#{$icon}::before {
+			content: $content;
+		}
+	}
+
+}
+
+
+// TODO: Use default iconfont config from react context instead of scss?
+
+$default-iconfonts: map-get($fonticons, $fonticons-family-default);
+
+[class*="iconfonts-default-"] {
+	font-family: map-get($default-iconfonts, family);
+}
+
+@each $icon, $content in map-get($default-iconfonts, icons) {
+	.default-#{$icon}::before {
+		content: $content;
+	}
+}

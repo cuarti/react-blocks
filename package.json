@@ -21,8 +21,7 @@
     "test:lint": "npm run test:tslint && npm run test:stylelint",
     "test:tslint": "tslint **/*.ts -e '**/*.d.ts' -t verbose",
     "test:stylelint": "stylelint **.*.scss --syntax scss",
-    "test:jest": "jest",
-    "script:createUser": "ts-node ./scripts/createUser.ts"
+    "test:jest": "jest"
   },
   "author": {
     "name": "Albert Cuartiella",

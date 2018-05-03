@@ -25,7 +25,7 @@ export module Style {
 			return r.concat(v);
 
 		// TODO: Abstract in @agama/types array uniques modifier
-		}, []).filter((v, i, a) => a.slice(0, i).indexOf(v) < 0).join(' ');
+		}, []).filter((v, i, a) => v && a.slice(0, i).indexOf(v) < 0).join(' ');
 
 	}
 

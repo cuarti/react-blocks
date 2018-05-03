@@ -1,0 +1,31 @@
+
+@import "fonts";
+@import "icons/flaticon";
+@import "icons/fontawesome-regular";
+@import "icons/fontawesome-solid";
+@import "icons/fontawesome-brands";
+
+
+// TODO: Add more properties: name (replace key with font name, non usable in css)
+$fonticons: (
+	fi: (
+		family: "Flaticon",
+		icons: $flaticon-icons
+	),
+	far: (
+		family: "FontAwesome",
+		icons: $fontawesome-regular-icons
+	),
+	fas: (
+		family: "FontAwesomeSolid",
+		icons: $fontawesome-solid-icons
+	),
+	fab: (
+		family: "FontAwesomeBrands",
+		icons: $fontawesome-brands-icons
+	)
+) !default;
+
+$fonticons-family-default: "fi" !default;
+
+

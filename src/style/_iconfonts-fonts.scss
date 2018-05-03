@@ -1,0 +1,64 @@
+
+@import "variables";
+
+
+// TODO: Add properties to $iconfonts item to generate fonts automatically from variables
+
+@font-face {
+	$path: "#{$font-directory}/Flaticon";
+	$family: map-get(map-get($fonticons, fi), font-family);
+
+	font-family: Flaticon;
+	src: url("#{$path}/Flaticon.eot");
+	src: url("#{$path}/Flaticon.eot?#iefix") format("embedded-opentype"),
+		url("#{$path}/Flaticon.woff") format("woff"),
+		url("#{$path}/Flaticon.ttf") format("truetype"),
+		url("#{$path}/Flaticon.svg#Flaticon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	$path: "#{$font-directory}/FontAwesome";
+	$family: map-get(map-get($fonticons, far), font-family);
+
+	font-family: FontAwesome;
+	src: url("#{$path}/fa-regular-400.eot");
+	src: url("#{$path}/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+		url("#{$path}/fa-regular-400.woff2") format("woff2"),
+		url("#{$path}/fa-regular-400.woff") format("woff"),
+		url("#{$path}/fa-regular-400.ttf") format("truetype"),
+		url("#{$path}/fa-regular-400.svg#fontawesome") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	$path: "#{$font-directory}/FontAwesome";
+	$family: map-get(map-get($fonticons, fas), font-family);
+
+	font-family: FontAwesomeSolid;
+	src: url("#{$path}/fa-solid-900.eot");
+	src: url("#{$path}/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+		url("#{$path}/fa-solid-900.woff2") format("woff2"),
+		url("#{$path}/fa-solid-900.woff") format("woff"),
+		url("#{$path}/fa-solid-900.ttf") format("truetype"),
+		url("#{$path}/fa-solid-900.svg#fontawesome") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	$path: "#{$font-directory}/FontAwesome";
+	$family: map-get(map-get($fonticons, fab), font-family);
+
+	font-family: FontAwesomeBrands;
+	src: url("#{$path}/fa-brands-400.eot");
+	src: url("#{$path}/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+		url("#{$path}/fa-brands-400.woff2") format("woff2"),
+		url("#{$path}/fa-brands-400.woff") format("woff"),
+		url("#{$path}/fa-brands-400.ttf") format("truetype"),
+		url("#{$path}/fa-brands-400.svg#fontawesome") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
