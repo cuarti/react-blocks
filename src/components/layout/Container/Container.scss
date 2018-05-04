@@ -1,0 +1,19 @@
+
+@import "../../../style/variables";
+
+
+.container {
+	padding: 0 $gutter;
+	margin: 0 auto;
+	//box-sizing: border-box;
+}
+
+.static {
+
+	@each $name, $size in $screen-sizes {
+		@media (min-width: $size) {
+			width: $size;
+		}
+	}
+
+}

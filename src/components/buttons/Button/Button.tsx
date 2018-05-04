@@ -46,11 +46,8 @@ export class Button extends PureComponent<ButtonProps> {
 			}
 		);
 
-        return (
-            <button className={className} {...rest} >
-				{children}
-            </button>
-        );
+        return <button className={className} {...rest} >{children}</button>;
+
     }
 
 }
