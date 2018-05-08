@@ -15,7 +15,7 @@ export interface InputTheme extends TReactCSSThemrTheme {
 export interface InputProps extends StyledProps<InputTheme>, InputHTMLAttributes<HTMLInputElement> {
 	// defaultValue?: any;
 	// value?: any;
-	// onChange?: (data: any) => void;
+	onValue?: (newValue: any, oldValue: any) => void;
 }
 
 export interface InputState {
@@ -25,55 +25,60 @@ export interface InputState {
 @Themr(Input.name, theme)
 export class Input extends PureComponent<InputProps, InputState> {
 
+	public static defaultProps: Partial<InputProps> = {
+		type: 'text'
+	};
+
 	public constructor(props?: InputProps, context?: any) {
 		super(props, context);
 
-		this.state = {value: this.props.defaultValue || this.props.value};
+		this.state = {value: this.parse(this.props.defaultValue as any || this.props.value)};
 	}
 
-	public componentWillReceiveProps(nextProps: InputProps): void {
-
-		// console.log(nextProps.value, this.state.value, nextProps.value && nextProps.value !== this.state.value);
-		// if(nextProps.value !== this.state.value) {
-		//     console.log('TRUE');
-		//     this.setState({value: nextProps.value});
-		// }
-
-		if(this.state.value !== !nextProps.value) {
-			this.setState({value: nextProps.value})
-		}
-	}
+	// public componentWillReceiveProps(nextProps: InputProps): void {
+	//
+	// 	// console.log(nextProps.value, this.state.value, nextProps.value && nextProps.value !== this.state.value);
+	// 	// if(nextProps.value !== this.state.value) {
+	// 	//     console.log('TRUE');
+	// 	//     this.setState({value: nextProps.value});
+	// 	// }
+	//
+	// 	if(this.state.value !== !nextProps.value) {
+	// 		this.setState({value: nextProps.value})
+	// 	}
+	// }
 
 	public render(): ReactNode {
 
-		let {theme, className, ...rest} = this.props;
+		let {theme, className, onValue, ...rest} = this.props;
+		let {value} = this.state;
 
 		className = Style.classNames(theme.input, className);
 
-		return <input className={className} {...rest} />;
-
-		// return (
-		// 	<input
-		// 		   value={this.state.value || ''}
-		// 		   onChange={this.onChange} />
-		// );
-
+		return <input className={className} {...rest} value={value} onChange={this.onChange} />;
 	}
 
 	@Bind()
 	private onChange(event: any): void {
 
-		let {onChange} = this.props;
-		let {value} = event.target;
+		let {onValue, onChange} = this.props;
+		let {value: oldValue} = this.state;
+		let value = this.parse(event.target.value);
 
-		this.setState({value}, () => onChange && this.parse(value));
+		if(onChange) {
+			onChange(event);
+		}
+
+		this.setState({value}, () => {
+			if(onValue) {
+				onValue(value, oldValue);
+			}
+		});
 
 	}
 
 	private parse(data: string): any {
-
-		return this.props.type !== 'number' ? data : data as any * 1;
-
+		return this.props.type === 'number' ? Number(data) : data;
 	}
 
 }
