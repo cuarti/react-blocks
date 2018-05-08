@@ -1,0 +1,25 @@
+
+@import "../../../style/variables";
+@import "../../../style/mixins";
+
+
+.input {
+	background-color: $white;
+	//width: 100%;
+	padding: 6px 12px;
+	border: none;
+	box-sizing: border-box;
+	transition: ease all .5s;
+	@include border-radius(3px);
+	@include box-shadow(0 0 3px rgba($black, .25));
+
+	@include hover {
+		@include box-shadow(0 0 4px rgba($black, .4));
+	}
+
+	@include focus-active {
+		outline: none;
+		@include box-shadow(0 0 5px rgba($black, .6));
+	}
+
+}
