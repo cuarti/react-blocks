@@ -24,7 +24,7 @@ export const prod = {
 	// devtool: 'cheap-module-eval-source-map',
 
 	entry: [
-		'./index.prod.tsx'
+		'./index.ts'
 	],
 
 	output: {
