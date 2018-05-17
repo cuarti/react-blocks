@@ -13,6 +13,7 @@ export interface ColTheme extends TReactCSSThemrTheme {
 	[size: string]: string;
 }
 
+// TODO: Don't extend from HTMLAttributes<HTMLDivElement>
 export interface ColProps extends StyledProps<ColTheme>, HTMLAttributes<HTMLDivElement> {
 	// @deprecated
 	size: number;

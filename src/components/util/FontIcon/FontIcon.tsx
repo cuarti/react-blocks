@@ -14,6 +14,7 @@ export interface FontIconTheme extends TReactCSSThemrTheme {
 	[icon: string]: string;
 }
 
+// TODO: Don't extend from HTMLAttributes<HTMLSpanElement>
 export interface FontIconProps extends StyledProps<FontIconTheme>, HTMLAttributes<HTMLSpanElement> {
 	value: string;
 }

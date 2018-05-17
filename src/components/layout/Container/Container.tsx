@@ -13,6 +13,7 @@ export interface ContainerTheme extends TReactCSSThemrTheme {
 	static?: string;
 }
 
+// TODO: Don't extend from HTMLAttributes<HTMLDivElement>
 export interface ContainerProps extends StyledProps<ContainerTheme>, HTMLAttributes<HTMLDivElement> {
 	fluid?: boolean;
 }

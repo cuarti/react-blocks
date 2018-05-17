@@ -12,6 +12,7 @@ export interface InputTheme extends TReactCSSThemrTheme {
 	input?: string;
 }
 
+// TODO: Don't extend from InputHTMLAttributes<HTMLInputElement>
 export interface InputProps extends StyledProps<InputTheme>, InputHTMLAttributes<HTMLInputElement> {
 	// defaultValue?: any;
 	// value?: any;

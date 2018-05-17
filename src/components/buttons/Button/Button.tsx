@@ -15,6 +15,7 @@ export interface ButtonTheme extends TReactCSSThemrTheme {
 	active?: string;
 }
 
+// TODO: Don't extend from ButtonHTMLAttributes<HTMLButtonElement>
 export interface ButtonProps extends StyledProps<ButtonTheme>, ButtonHTMLAttributes<HTMLButtonElement> {
 	color?: string;
 	size?: string;

@@ -12,6 +12,7 @@ export interface RowTheme extends TReactCSSThemrTheme {
 	row?: string;
 }
 
+// TODO: Don't extend from HTMLAttributes<HTMLDivElement>
 export type RowProps = StyledProps<RowTheme> & HTMLAttributes<HTMLDivElement>;
 
 @Themr(Row.name, theme)
