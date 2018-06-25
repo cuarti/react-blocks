@@ -3,7 +3,7 @@ import * as React from 'react';
 import {Fragment} from 'react';
 import {storiesOf} from '@storybook/react';
 
-import {Container} from '../../../src';
+import {Container} from '../../../lib';
 
 
 storiesOf('Container', module).add('default', () =>

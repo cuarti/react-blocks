@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 
-require('../../src/style/scaffolding.scss');
+require('../../lib/style/scaffolding.scss');
 
 
 storiesOf('Scaffolding', module).add('default', () => (

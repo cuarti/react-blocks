@@ -1,5 +1,5 @@
 
-import {Style} from '../../../src';
+import {Style} from '../../../lib';
 
 
 test('Style.classNames', () => {

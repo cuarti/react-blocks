@@ -4,7 +4,7 @@ import {Fragment} from 'react';
 import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 
-import {FontIcon} from '../../../src';
+import {FontIcon} from '../../../lib';
 
 
 const fi = ['video-camera', 'like-1', 'bookmark', 'calculator', 'pie-chart', 'password', 'bag', 'sand-clock', 'ring',

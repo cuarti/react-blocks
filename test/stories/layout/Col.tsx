@@ -3,7 +3,7 @@ import * as React from 'react';
 import {Fragment, CSSProperties} from 'react';
 import {storiesOf} from '@storybook/react';
 
-import {Container, Row, Col} from '../../../src';
+import {Container, Row, Col} from '../../../lib';
 
 
 storiesOf('Col', module).add('default', () =>
