@@ -3,6 +3,7 @@
 
 
 .container {
+	min-width: map-get($screen-sizes, xs);
 	padding: 0 $gutter;
 	margin: 0 auto;
 	//box-sizing: border-box;
@@ -10,10 +11,35 @@
 
 .static {
 
-	@each $name, $size in $screen-sizes {
-		@media (min-width: $size) {
+	@each $name, $screen-size in $screen-sizes {
+
+		$size: $screen-size - $gutter * 2;
+
+		@media (min-width: $screen-size) {
 			width: $size;
 		}
 	}
 
 }
+
+//// TODO: Add sizes
+//
+//.xl {
+//	background-color: #f00;
+//}
+//
+//.lg {
+//	background-color: #d9534f;
+//}
+//
+//.md {
+//	background-color: #00b3ee;
+//}
+//
+//.sm {
+//	background-color: #ff0;
+//}
+//
+//.xs {
+//	background-color: #c50;
+//}
