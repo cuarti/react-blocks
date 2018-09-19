@@ -65,7 +65,7 @@
     "file-loader": "^1.1.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "react-hot-loader": "^4.1.3",
     "react-test-renderer": "^16.3.2",
     "sass-loader": "^7.0.1",
@@ -78,7 +78,7 @@
     "typescript": "^2.8.3",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.1.8",
     "webpack-notifier": "^1.6.0"
   },
   "jest": {
@@ -96,7 +96,7 @@
     "testPathIgnorePatterns": [
       "__snapshots__"
     ],
-    "testRegex": "/test/spec.*|(\\.|/)\\.(jsx?|tsx?)$",
+    "testRegex": "/test/specs/.*/\\w+\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
