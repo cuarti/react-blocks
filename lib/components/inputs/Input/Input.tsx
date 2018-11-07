@@ -36,22 +36,23 @@ export class Input extends PureComponent<InputProps, InputState> {
 		this.state = {value: this.parse(this.props.defaultValue as any || this.props.value)};
 	}
 
-	// public componentWillReceiveProps(nextProps: InputProps): void {
-	//
-	// 	// console.log(nextProps.value, this.state.value, nextProps.value && nextProps.value !== this.state.value);
-	// 	// if(nextProps.value !== this.state.value) {
-	// 	//     console.log('TRUE');
-	// 	//     this.setState({value: nextProps.value});
-	// 	// }
-	//
-	// 	if(this.state.value !== !nextProps.value) {
-	// 		this.setState({value: nextProps.value})
-	// 	}
-	// }
+	public componentWillReceiveProps(nextProps: InputProps): void {
+
+		// console.log(nextProps.value, this.state.value, nextProps.value && nextProps.value !== this.state.value);
+		// if(nextProps.value !== this.state.value) {
+		//     console.log('TRUE');
+		//     this.setState({value: nextProps.value});
+		// }
+
+		if(this.state.value !== !nextProps.value) {
+			this.setState({value: nextProps.value})
+		}
+
+	}
 
 	public render(): ReactNode {
 
-		let {theme, className, onValue, ...rest} = this.props;
+		let {theme, className, ...rest} = this.props;
 		let {value} = this.state;
 
 		className = Style.classNames(theme.input, className);
