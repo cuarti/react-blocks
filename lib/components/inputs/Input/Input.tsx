@@ -52,7 +52,7 @@ export class Input extends PureComponent<InputProps, InputState> {
 
 	public render(): ReactNode {
 
-		let {theme, className, ...rest} = this.props;
+		let {theme, className, onValue, ...rest} = this.props;
 		let {value} = this.state;
 
 		className = Style.classNames(theme.input, className);
