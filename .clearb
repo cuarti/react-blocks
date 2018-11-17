@@ -1,0 +1,12 @@
+
+.build-config/**/*.d.ts
+.build-config/**/*.js.map
+.build-config/webpack/**/*.js
+
+lib/**/*.d.ts
+lib/**/*.js
+lib/**/*.js.map
+
+test/**/*.d.ts
+test/**/*.js
+test/**/*.js.map

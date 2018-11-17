@@ -21,7 +21,8 @@
     "test:lint": "npm run test:tslint && npm run test:stylelint",
     "test:tslint": "tslint **/*.ts -e '**/*.d.ts' -t verbose",
     "test:stylelint": "stylelint **.*.scss --syntax scss",
-    "test:jest": "jest"
+    "test:jest": "jest",
+    "clear": "clearb"
   },
   "author": {
     "name": "Albert Cuartiella",
@@ -61,11 +62,12 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "clearb": "^0.1.0",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "react-hot-loader": "^4.1.3",
     "react-test-renderer": "^16.3.2",
     "sass-loader": "^7.0.1",
@@ -78,7 +80,7 @@
     "typescript": "^2.8.3",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.1.8",
     "webpack-notifier": "^1.6.0"
   },
   "jest": {
@@ -96,7 +98,7 @@
     "testPathIgnorePatterns": [
       "__snapshots__"
     ],
-    "testRegex": "/test/spec.*|(\\.|/)\\.(jsx?|tsx?)$",
+    "testRegex": "/test/specs/.*/\\w+\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
