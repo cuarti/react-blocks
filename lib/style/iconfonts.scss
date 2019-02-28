@@ -11,14 +11,20 @@
 	$family: map-get($provider, family);
 	$icons: map-get($provider, icons);
 
-	[class*="iconfonts-#{$name}-"] {
+	.iconfonts-#{$name} {
 		font-family: $family;
 	}
 
 	@each $icon, $content in $icons {
+
+		.#{$name}-#{$icon} {
+			composes: iconfonts-#{$name};
+		}
+
 		.#{$name}-#{$icon}::before {
 			content: $content;
 		}
+
 	}
 
 }
@@ -28,12 +34,18 @@
 
 $default-iconfonts: map-get($fonticons, $fonticons-family-default);
 
-[class*="iconfonts-default-"] {
+.iconfonts-default {
 	font-family: map-get($default-iconfonts, family);
 }
 
 @each $icon, $content in map-get($default-iconfonts, icons) {
+
+	.default-#{$icon} {
+		composes: iconfonts-default;
+	}
+
 	.default-#{$icon}::before {
 		content: $content;
 	}
+
 }

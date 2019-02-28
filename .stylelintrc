@@ -9,7 +9,8 @@
 	"property-no-unknown": [
 	  true,
 	  {
-		"checkPrefixed": true
+		"checkPrefixed": true,
+		"ignoreProperties": ["composes"]
 	  }
 	],
 	"keyframe-declaration-no-important": true,
